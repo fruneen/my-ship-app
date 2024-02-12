@@ -19,5 +19,6 @@ jobs:
           context: .
           file: ./apps/web/Dockerfile
           push: false
-          build-args: [ 'APP_ENV=STAGING' ]
+          args:
+            APP_ENV: STAGING
           tags: ship-web:${{ github.sha }}
