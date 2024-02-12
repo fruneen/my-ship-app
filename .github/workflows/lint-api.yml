@@ -28,8 +28,5 @@ jobs:
       - name: Install dependencies
         run: pnpm install --filter=api...
 
-      - name: Run lint-action
-        uses: wearerequired/lint-action@v2
-        with:
-          eslint: true
-          path: apps/api
+      - name: Run ESLint & TypeScript Check
+        run: cd apps/api && pnpm run test:lint
