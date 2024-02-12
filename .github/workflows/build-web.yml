@@ -16,7 +16,7 @@ jobs:
       - name: Build
         uses: docker/build-push-action@v5
         with:
-          build-arg: APP_ENV=STAGING
+          build-arg: APP_ENV=staging
           context: .
           file: ./apps/web/Dockerfile
           push: false
