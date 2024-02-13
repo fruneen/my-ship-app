@@ -7,6 +7,9 @@ on:
   pull_request:
     branches:
       - main
+  paths:
+    - 'apps/api'
+    - 'packages/**'
   workflow_dispatch:
 
 permissions:
@@ -33,8 +36,6 @@ jobs:
         uses: wearerequired/lint-action@v2
         with:
           eslint: true
-          eslint_dir: ./apps/api
           eslint_extensions: js,ts
           tsc: true
-          tsc_dir: ./apps/api
           tsc_extensions: ts
