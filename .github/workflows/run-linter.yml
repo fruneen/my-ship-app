@@ -25,5 +25,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Run Precommit Script
-        run: pnpm turbo run precommit
+      - name: Run linters
+        uses: wearerequired/lint-action@v2
+        with:
+          eslint: true
+          eslint_dir: apps/api
