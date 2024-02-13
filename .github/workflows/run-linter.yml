@@ -30,3 +30,4 @@ jobs:
         with:
           eslint: true
           eslint_dir: ./apps/api
+          eslint_extensions: js,ts
