@@ -28,6 +28,10 @@ jobs:
       - name: Run linters
         uses: wearerequired/lint-action@v2
         with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           eslint: true
           eslint_dir: ./apps/api
           eslint_extensions: js,ts
+          tsc: true
+          tsc_dir: ./apps/api
+          tsc_extensions: ts
