@@ -1,16 +1,11 @@
-name: Lint
+name: Linter
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
-#  paths:
-#    - 'apps/api'
-#    - 'packages/**'
-  workflow_dispatch:
+  workflow_call:
+    inputs:
+      dir:
+        type: string
+        required: true
 
 permissions:
   checks: write
@@ -18,7 +13,9 @@ permissions:
 
 jobs:
   lint:
+    name: Lint Application Code
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v3
@@ -29,13 +26,15 @@ jobs:
         with:
           node-version: 20
           cache: 'pnpm'
-      - name: Install dependencies
+      - name: Install Dependencies
         run: pnpm install
 
-      - name: Run linters
+      - name: Run Linters
         uses: wearerequired/lint-action@v2
         with:
           eslint: true
+          eslint_dir: {{ inputs.dir }}
           eslint_extensions: js,ts
           tsc: true
           tsc_extensions: ts
+          tsc_dir: {{ inputs.dir }}
