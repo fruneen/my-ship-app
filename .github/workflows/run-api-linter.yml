@@ -17,7 +17,6 @@ permissions:
 
 jobs:
   lint:
-    - uses: actions/checkout@v4
-    - uses: ./.github/workflows/linter.template.yml
-      with:
-        dir: apps/api
+    uses: ./.github/workflows/linter.template.yml
+    with:
+      dir: apps/api
