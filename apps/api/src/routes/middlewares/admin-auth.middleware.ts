@@ -1,5 +1,7 @@
 import { AppKoaContext, Next } from 'types';
 
+import adminAuth from './middlewares/admin-auth.middleware';
+
 import config from 'config';
 
 const adminAuth = (ctx: AppKoaContext, next: Next) => {
