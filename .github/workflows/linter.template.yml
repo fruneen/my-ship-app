@@ -33,8 +33,8 @@ jobs:
         uses: wearerequired/lint-action@v2
         with:
           eslint: true
-          eslint_dir: {{ inputs.dir }}
+          eslint_dir: ${{ inputs.dir }}
           eslint_extensions: js,ts
           tsc: true
           tsc_extensions: ts
-          tsc_dir: {{ inputs.dir }}
+          tsc_dir: ${{ inputs.dir }}
