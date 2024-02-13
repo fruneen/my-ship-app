@@ -5,7 +5,7 @@ const Document = () => (
   <Html>
     <Head>
       <link rel="icon" href="/favicon.ico" />
-      <ColorSchemeScript defaultColorScheme="auto" />
+      <ColorSchemeScript defaultColorScheme="auto" asd="1" asd="1" />
     </Head>
     <body>
       <Main />
