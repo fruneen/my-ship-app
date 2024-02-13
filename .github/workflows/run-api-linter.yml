@@ -7,8 +7,8 @@ on:
   pull_request:
     branches:
       - main
-  paths:
-    - 'apps/api'
+#  paths:
+#    - 'apps/api'
   workflow_dispatch:
 
 permissions:
