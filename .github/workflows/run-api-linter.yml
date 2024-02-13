@@ -17,6 +17,6 @@ permissions:
 
 jobs:
   lint:
-    uses: ./.github/workflows/run-linter.template.yml
+    uses: .github/workflows/linter.template.yml
     with:
       dir: apps/api
