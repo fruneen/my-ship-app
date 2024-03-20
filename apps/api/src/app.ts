@@ -30,7 +30,7 @@ const initKoa = () => {
 
   app.use(cors({ credentials: true }));
   app.use(helmet());
-  qs(app as any);
+  qs(app as Array<number>);
   app.use(bodyParser({
     enableTypes: ['json', 'form', 'text'],
     onerror: (err: Error, ctx) => {
